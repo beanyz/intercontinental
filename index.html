@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intercontinental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Button (☰) -->
+    <div id="menu-button" onclick="toggleMenu()">☰</div>
+
+    <!-- Slide-Out Menu -->
+    <div id="menu">
+        <button onclick="goToCourse('course0')">🏠 Home</button>
+        <button onclick="goToCourse('course0_menu')">📜 Menu</button>
+        <button onclick="goToCourse('course1')">1st Course</button>
+        <button onclick="goToCourse('course2')">2nd Course</button>
+        <button onclick="goToCourse('course3')">3rd Course</button>
+        <button onclick="goToCourse('course4')">4th Course</button>
+        <button onclick="goToCourse('course5')">5th Course</button>
+    </div>
+
+
+    <!-- Welcome Page -->
+    <div class="course start-screen" id="course0" onclick="goToCourse('course0_menu')">
+        <h1>Welcome to The Intercontinental</h1>
+        <p>Click anywhere to view the menu.</p>
+    </div>
+
+    <!-- Restaurant Menu Page -->
+    <div class="course" id="course0_menu">
+        <div class="menu-container">
+            <h1>📜 The Menu</h1>
+            <ul class="menu-list">
+                <li>🍖 Shanghai-Style Braised Pork Belly</li>
+                <li>🍲 Sundubu Jjigae (순두부찌개)</li>
+                <li>🍣 Salmon Sashimi</li>
+                <li>🍔 American Burger</li>
+                <li>🍧 Mango Bingsu</li>
+            </ul>
+            <button class="start-button" onclick="goToCourse('course1')">🍽️ Start Meal</button>
+        </div>
+    </div>
+
+
+    <!-- Food Courses -->
+    <div class="course" id="course1">
+        <h2 class="food-title">Shanghai-Style Braised Pork Belly (红烧肉)</h2>
+        <img class="food" src="images/pork_belly.jpg" alt="Shanghai-Style Braised Pork Belly" onclick="eatFood('course1')">
+        <img class="plate hidden" src="images/empty_pork_belly_plate.jpg" alt="Empty Plate" onclick="goToCourse('course2')">
+        <!-- <div class="overlay centered">I'm Allan!</div> -->
+        </div>
+        <!-- <div class="info hidden">Name, Degree, Year</div> -->
+    </div>
+
+    <div class="course" id="course2">
+        <h2 class="food-title">Sundubu Jjigae (순두부찌개)</h2>
+        <img class="food" src="images/sundubu_jjigae.jpg" alt="Sundubu Jjigae" onclick="eatFood('course2')">
+        <img class="plate hidden" src="images/empty_sundubu_plate.jpg" alt="Empty Plate" onclick="goToCourse('course3')">
+        <div class="info hidden">My relevant skills and experience in COMP1531</div>
+    </div>
+
+    <div class="course" id="course3">
+        <h2 class="food-title">Salmon Sashimi</h2>
+        <img class="food" src="images/sashimi.jpg" alt="Salmon Sashimi" onclick="eatFood('course3')">
+        <img class="plate hidden" src="images/empty_sashimi_plate.jpg" alt="Empty Plate" onclick="goToCourse('course4')">
+        <div class="info hidden">My hobbies</div>
+    </div>
+
+    <div class="course" id="course4">
+        <h2 class="food-title">American Burger</h2>
+        <img class="food" src="images/burger.jpg" alt="American Burger" onclick="eatFood('course4')">
+        <img class="plate hidden" src="images/empty_burger_plate.jpg" alt="Empty Plate" onclick="goToCourse('course5')">
+        <div class="info hidden">Favorite music and movies</div>
+    </div>
+
+    <div class="course" id="course5">
+        <h2 class="food-title">Greek Baklava</h2>
+        <img class="food" src="images/baklava.jpg" alt="Greek Baklava" onclick="eatFood('course5')">
+        <img class="plate hidden" src="images/empty_baklava_plate.jpg" alt="Empty Plate">
+        <div class="info hidden">Relevant links to me</div>
+        <div class="links" id="links">
+            <a href="https://www.linkedin.com/in/allan-chen-288760332/">LinkedIn</a>
+            <a href="https://www.instagram.com/anonymous.allan/">Instagram</a>
+            <a href="https://www.facebook.com/allan.chen.75873/">Facebook</a>
+        </div>
+    </div>
+    
+    <button onclick="nextCourse('intro')">Start</button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

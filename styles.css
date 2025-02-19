@@ -1,0 +1,254 @@
+/* general styles */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+/* auto hide courses */
+.course {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* only intro visible at start */
+#course0 {
+    display: flex !important;
+    background: url('images/start_page.jpg') center/cover no-repeat;
+    color: white;
+    
+}
+
+/* menu page style */
+#course0_menu {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* menu title */
+.menu-container h1 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+
+/* Centered Menu Container */
+.menu-container {
+    background: white; /* White background */
+    padding: 30px;
+    width: 60vw;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 20px; /* Rounded corners */
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Golden Border */
+.menu-container ::before {
+    content: "";
+    position: absolute;
+    top: -12px; /* Creates the gap effect */
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-radius: 25px; /* Matches the main container’s curves */
+    border: 5px solid gold; /* Golden border */
+    z-index: 1; /* Places it behind the white box */
+}
+
+/* menu list styling */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+/* meal start button */
+.start-button {
+    background: gold;
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background: darkgoldenrod;
+}
+
+/* hide food when eaten thingo */
+.hidden {
+    display: none;
+}
+
+/* Menu Button (☰) */
+#menu-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* slide out menu list thingo */
+#menu {
+    position: fixed;
+    top: 10px;
+    right: -200px;
+    width: 160px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+}
+
+/* shows menu */
+#menu.show {
+    right: 60px;
+}
+
+/* menu buttons */
+#menu button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: right;
+}
+
+#menu button:hover {
+    text-decoration: underline;
+}
+
+.course img.food {
+    width: 200vw;
+    max-width: 700px;
+}
+
+.course img.plate {
+    width: 700px; /* Plate is smaller */
+}
+
+/* food titles for food sections */
+.food-title {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Ensure only food sections have a white background */
+.course:not(#course0):not(#course0_menu) { 
+    background: white !important;
+    color: black;
+}
+
+#course0, #course0_menu {
+    background: url('images/start_page.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* start screen title styling */
+.start-screen h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Start Screen Title Styling */
+.start-screen p {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Start Meal Button */
+.start-button {
+    background: gold;
+    color: black;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: inline-block;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    position: absolute;
+    transform: translate(0, 20px);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.links a {
+    margin :1.3rem;
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+    text-shadow: 2px 2px 3px gray;
+}
+
+.links a:hover {
+    color: #ea9e41;
+}
+
+
+
